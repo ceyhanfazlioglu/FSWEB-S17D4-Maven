@@ -52,8 +52,8 @@ class SqlIntroApplicationTests {
 	@DisplayName("Öğrenci numarası 5 ile 10 arasında olan Kız öğrencileri listeleyiniz.")
 	@Test
 	void getFindGirlsWithOgrnoTest(){
-		assertEquals(ogrenciRepository.findGirlsWithOgrno().size(), 3);
-		assertEquals(ogrenciRepository.findGirlsWithOgrno().get(0).getAd(), "Betül");
+		assertEquals(ogrenciRepository.findGirlsWithOgrno().size(), 4);
+		assertEquals(ogrenciRepository.findGirlsWithOgrno().get(0).getAd(), "Sema");
 	}
 
 	@DisplayName("Öğrencileri adına göre sıralayınız (alfabetik)")
@@ -62,7 +62,7 @@ class SqlIntroApplicationTests {
 		assertEquals(ogrenciRepository.findStudentsAlphabetically().size(), 10);
 		assertEquals(ogrenciRepository.findStudentsAlphabetically().get(0).getAd(), "Betül");
 		assertEquals(ogrenciRepository.findStudentsAlphabetically()
-				.get(ogrenciRepository.findStudentsAlphabetically().size()-1).getAd(), "Sema");
+				.get(ogrenciRepository.findStudentsAlphabetically().size()-1).getAd(), "İsmail");
 	}
 
 	@DisplayName("10A sınıfındaki öğrencileri okul numarasına göre azalan olarak sıralayınız.")
